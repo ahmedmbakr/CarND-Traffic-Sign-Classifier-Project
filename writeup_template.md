@@ -19,14 +19,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image-hist-before-augmentation]: ./output_images/data-visualization-before-augmentation.PNG "Classes histogram before augmentation"
+[image-hist-after-augmentation]: ./output_images/data-visualization-after-augmentation.PNG "Classes histogram after augmentation"
+[image-rotate]: ./output_images/rotate_img_num_1.png "Rotated image"
+[image-shift]: ./output_images/shift_img_num_1.png "Shifted image"
 [test-image1]: ./test_images/Traffic_Sign_01.png "Test Traffic Sign 1"
 [test-image2]: ./test_images/Traffic_Sign_02.png "Test Traffic Sign 2"
 [test-image3]: ./test_images/Traffic_Sign_03.png "Test Traffic Sign 3"
@@ -52,9 +48,13 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data are distribured among the traffic sign classifier classes.
 
-![alt text][image1]
+![alt text][image-hist-before-augmentation]
+
+Here is an exploratory visualization of the data set after augmentation that will be discussed in details below.
+
+![alt text][image-hist-after-augmentation]
 
 ### Design and Test a Model Architecture
 
@@ -88,11 +88,11 @@ foreach a-class in all-classes
 
 Here is an example of an original image and an augmented rotated image:
 
-![alt text][image3]
+![alt text][image-rotate]
 
 Here is an example of an original image and an augmented shifted image:
 
-![alt text][image3]
+![alt text][image-shift]
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -153,7 +153,7 @@ Here are five German traffic signs that I found on the web:
 ![alt text][test-image1] ![alt text][test-image2] ![alt text][test-image3] 
 ![alt text][test-image4] ![alt text][test-image5]
 
-The first image might be difficult to classify because ...
+The first image might be difficult to classify because the number of training data associated with its class is very low.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
